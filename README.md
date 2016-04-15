@@ -7,7 +7,7 @@ Cattle manager is an Android application i code for my farm.
   - Manage cost of farm 
   - Draw graph for cattle grow
 
-Cattle manager use MVP and androi clean architecture with 3 tier data, domain and presenter.
+Cattle manager use MVP and android clean architecture with 3 tier data, domain and presenter.
 
 Libraries and tools included:
 
@@ -21,6 +21,7 @@ Libraries and tools included:
  - Picasso
  - event bus
  - Mockito
+ - MPAndroidChart
 # License
     Copyright 2016 Crazy Farm.
 
