@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/add_cattle"
+        android:title="Add cattle"
+        android:icon="@drawable/ic_add"
+        android:orderInCategory="90"
+        app:showAsAction="always" />
+    <item android:id="@+id/view_graph"
+        android:title="View graph"
+        android:icon="@drawable/ic_graph"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+</menu>

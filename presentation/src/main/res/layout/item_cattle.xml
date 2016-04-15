@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_user"
+    android:orientation="horizontal"
+    android:padding="@dimen/lv_row_padding"
+    tools:ignore="UseCompoundDrawables">
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/lv_row_icon_width"
+        android:layout_height="@dimen/lv_row_icon_width"
+        android:contentDescription="@string/string_content_description"
+        android:padding="@dimen/lv_row_icon_padding"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="#QV123"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/lv_row_text_size" />
+
+        <TextView
+            android:id="@+id/des"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Mua cho nham"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/lv_row_small_text_size" />
+
+        <TextView
+            android:id="@+id/weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="350kg 8month"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/lv_row_small_text_size" />
+    </LinearLayout>
+</LinearLayout>

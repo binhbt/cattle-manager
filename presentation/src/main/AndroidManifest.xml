@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.leo.cattle.presentation">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+
+        android:name="com.leo.cattle.presentation.AndroidApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name="com.leo.cattle.presentation.view.activity.UserDetailsActivity"
+            android:label="@string/activity_title_user_details"/>
+
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.MainActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.AddCattleActivity"
+            android:label="Add Cattle" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.AddEventActivity"
+            android:label="Add Event" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.AddCostActivity"
+            android:label="Add Cost" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.AddWeightActivity"
+            android:label="Add Weight" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.SignInActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.SignUpActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.leo.cattle.presentation.view.activity.CattleDetailActivity"
+            android:label="@string/app_name" />
+        <!-- [START gcm_receiver] -->
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="gcm.play.android.samples.com.gcmquickstart" />
+            </intent-filter>
+        </receiver>
+        <!-- [END gcm_receiver] -->
+
+        <!-- [START gcm_listener] -->
+        <service
+            android:name="com.leo.cattle.presentation.gcm.MyGcmListenerService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <!-- [END gcm_listener] -->
+        <!-- [START instanceId_listener] -->
+        <service
+            android:name="com.leo.cattle.presentation.gcm.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID"/>
+            </intent-filter>
+        </service>
+        <!-- [END instanceId_listener] -->
+        <service
+            android:name="com.leo.cattle.presentation.gcm.RegistrationIntentService"
+            android:exported="false">
+        </service>
+    </application>
+
+</manifest>
