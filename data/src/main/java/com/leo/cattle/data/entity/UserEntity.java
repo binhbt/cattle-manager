@@ -28,7 +28,7 @@ public class UserEntity {
   @SerializedName("avatar_url")
   private String avatarUrl;
 
-  @SerializedName("username")
+  @SerializedName("name")
   private String name;
 
   @SerializedName("fullname")
